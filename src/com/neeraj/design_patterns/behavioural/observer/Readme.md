@@ -9,6 +9,20 @@ charts not being modified. Hence observer pattern comes to the rescue.
 
 ```
                         Publish-Subscribe Pattern.
+
++++++++++++++++++++++
++ Subject           + 
++ (abstract class)  +
++-------------------+
++ attach(observer)  +
++ detach(observer)  +
++ notify()          +
++++++++++++++++++++++
+        /\
+        ||
+        ||
+        ||
+        ||
 |-----------------|                                         |-----------------------|
 | DataSource      |                                         | Observer(Interface)   |
 |-----------------|                                         |-----------------------|
@@ -26,3 +40,5 @@ charts not being modified. Hence observer pattern comes to the rescue.
                                      ============================             ============================
                                          
 ```
+
+We should provide a way for our subscriber to attach themself as observer, so that we can notify them
